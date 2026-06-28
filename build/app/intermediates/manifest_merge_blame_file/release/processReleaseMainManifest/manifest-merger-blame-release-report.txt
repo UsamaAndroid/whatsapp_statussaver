@@ -1,0 +1,259 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.statusdownloader.download.videoimagesaver"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="35" />
+10
+11    <uses-permission
+11-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:2:5-106
+12        android:name="android.permission.READ_EXTERNAL_STORAGE"
+12-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:2:22-77
+13        android:maxSdkVersion="32" />
+13-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:2:78-104
+14    <uses-permission
+14-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:3:5-107
+15        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+15-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:3:22-78
+16        android:maxSdkVersion="29" />
+16-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:3:79-105
+17    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+17-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:4:5-75
+17-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:4:22-73
+18    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+18-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:5:5-74
+18-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:5:22-72
+19    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+19-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:6:5-81
+19-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:6:22-79
+20    <uses-permission android:name="android.permission.INTERNET" />
+20-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:7:5-66
+20-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:7:22-64
+21
+22    <queries>
+22-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:36:5-47:15
+23        <intent>
+23-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:37:9-40:18
+24            <action android:name="android.intent.action.PROCESS_TEXT" />
+24-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:38:13-72
+24-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:38:21-70
+25
+26            <data android:mimeType="text/plain" />
+26-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:39:13-50
+26-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:39:19-48
+27        </intent>
+28        <intent>
+28-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:41:9-44:18
+29            <action android:name="android.intent.action.SEND" />
+29-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:42:13-64
+29-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:42:21-62
+30
+31            <data android:mimeType="*/*" />
+31-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:39:13-50
+31-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:39:19-48
+32        </intent>
+33
+34        <package android:name="com.whatsapp" />
+34-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:45:9-47
+34-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:45:18-45
+35        <package android:name="com.whatsapp.w4b" />
+35-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:46:9-51
+35-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:46:18-49
+36    </queries>
+37
+38    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+38-->[androidx.media3:media3-common:1.4.1] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\b48293ba28136768051e64bbcbd90283\transformed\jetified-media3-common-1.4.1\AndroidManifest.xml:22:5-79
+38-->[androidx.media3:media3-common:1.4.1] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\b48293ba28136768051e64bbcbd90283\transformed\jetified-media3-common-1.4.1\AndroidManifest.xml:22:22-76
+39
+40    <permission
+40-->[androidx.core:core:1.13.1] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\52e18c112b3c464ebfad2622182d3ae8\transformed\core-1.13.1\AndroidManifest.xml:22:5-24:47
+41        android:name="com.statusdownloader.download.videoimagesaver.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+41-->[androidx.core:core:1.13.1] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\52e18c112b3c464ebfad2622182d3ae8\transformed\core-1.13.1\AndroidManifest.xml:23:9-81
+42        android:protectionLevel="signature" />
+42-->[androidx.core:core:1.13.1] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\52e18c112b3c464ebfad2622182d3ae8\transformed\core-1.13.1\AndroidManifest.xml:24:9-44
+43
+44    <uses-permission android:name="com.statusdownloader.download.videoimagesaver.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+44-->[androidx.core:core:1.13.1] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\52e18c112b3c464ebfad2622182d3ae8\transformed\core-1.13.1\AndroidManifest.xml:26:5-97
+44-->[androidx.core:core:1.13.1] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\52e18c112b3c464ebfad2622182d3ae8\transformed\core-1.13.1\AndroidManifest.xml:26:22-94
+45
+46    <application
+47        android:name="android.app.Application"
+47-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:11:9-42
+48        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+48-->[androidx.core:core:1.13.1] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\52e18c112b3c464ebfad2622182d3ae8\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
+49        android:extractNativeLibs="true"
+50        android:icon="@mipmap/ic_launcher"
+50-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:12:9-43
+51        android:label="Status Saver"
+51-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:10:9-37
+52        android:requestLegacyExternalStorage="true" >
+52-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:13:9-52
+53        <activity
+53-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:14:9-31:20
+54            android:name="com.statusdownloader.download.videoimagesaver.MainActivity"
+54-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:15:13-41
+55            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+55-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:20:13-163
+56            android:exported="true"
+56-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:16:13-36
+57            android:hardwareAccelerated="true"
+57-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:21:13-47
+58            android:launchMode="singleTop"
+58-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:17:13-43
+59            android:taskAffinity=""
+59-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:18:13-36
+60            android:theme="@style/LaunchTheme"
+60-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:19:13-47
+61            android:windowSoftInputMode="adjustResize" >
+61-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:22:13-55
+62            <meta-data
+62-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:23:13-26:17
+63                android:name="io.flutter.embedding.android.NormalTheme"
+63-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:24:15-70
+64                android:resource="@style/NormalTheme" />
+64-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:25:15-52
+65
+66            <intent-filter>
+66-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:27:13-30:29
+67                <action android:name="android.intent.action.MAIN" />
+67-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:28:17-68
+67-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:28:25-66
+68
+69                <category android:name="android.intent.category.LAUNCHER" />
+69-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:29:17-76
+69-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:29:27-74
+70            </intent-filter>
+71        </activity>
+72
+73        <meta-data
+73-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:32:9-34:33
+74            android:name="flutterEmbedding"
+74-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:33:13-44
+75            android:value="2" />
+75-->E:\flutterprojects\whatsapp_saver\android\app\src\main\AndroidManifest.xml:34:13-30
+76        <!--
+77           Declares a provider which allows us to store files to share in
+78           '.../caches/share_plus' and grant the receiving action access
+79        -->
+80        <provider
+80-->[:share_plus] E:\flutterprojects\whatsapp_saver\build\share_plus\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:13:9-21:20
+81            android:name="dev.fluttercommunity.plus.share.ShareFileProvider"
+81-->[:share_plus] E:\flutterprojects\whatsapp_saver\build\share_plus\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:14:13-77
+82            android:authorities="com.statusdownloader.download.videoimagesaver.flutter.share_provider"
+82-->[:share_plus] E:\flutterprojects\whatsapp_saver\build\share_plus\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:15:13-74
+83            android:exported="false"
+83-->[:share_plus] E:\flutterprojects\whatsapp_saver\build\share_plus\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:16:13-37
+84            android:grantUriPermissions="true" >
+84-->[:share_plus] E:\flutterprojects\whatsapp_saver\build\share_plus\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:17:13-47
+85            <meta-data
+85-->[:share_plus] E:\flutterprojects\whatsapp_saver\build\share_plus\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:18:13-20:68
+86                android:name="android.support.FILE_PROVIDER_PATHS"
+86-->[:share_plus] E:\flutterprojects\whatsapp_saver\build\share_plus\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:19:17-67
+87                android:resource="@xml/flutter_share_file_paths" />
+87-->[:share_plus] E:\flutterprojects\whatsapp_saver\build\share_plus\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:20:17-65
+88        </provider>
+89        <!--
+90           This manifest declared broadcast receiver allows us to use an explicit
+91           Intent when creating a PendingItent to be informed of the user's choice
+92        -->
+93        <receiver
+93-->[:share_plus] E:\flutterprojects\whatsapp_saver\build\share_plus\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:26:9-32:20
+94            android:name="dev.fluttercommunity.plus.share.SharePlusPendingIntent"
+94-->[:share_plus] E:\flutterprojects\whatsapp_saver\build\share_plus\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:27:13-82
+95            android:exported="false" >
+95-->[:share_plus] E:\flutterprojects\whatsapp_saver\build\share_plus\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:28:13-37
+96            <intent-filter>
+96-->[:share_plus] E:\flutterprojects\whatsapp_saver\build\share_plus\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:29:13-31:29
+97                <action android:name="EXTRA_CHOSEN_COMPONENT" />
+97-->[:share_plus] E:\flutterprojects\whatsapp_saver\build\share_plus\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:30:17-65
+97-->[:share_plus] E:\flutterprojects\whatsapp_saver\build\share_plus\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:30:25-62
+98            </intent-filter>
+99        </receiver>
+100
+101        <activity
+101-->[:url_launcher_android] E:\flutterprojects\whatsapp_saver\build\url_launcher_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:9-11:74
+102            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+102-->[:url_launcher_android] E:\flutterprojects\whatsapp_saver\build\url_launcher_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:13-74
+103            android:exported="false"
+103-->[:url_launcher_android] E:\flutterprojects\whatsapp_saver\build\url_launcher_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:13-37
+104            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+104-->[:url_launcher_android] E:\flutterprojects\whatsapp_saver\build\url_launcher_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:13-71
+105
+106        <uses-library
+106-->[androidx.window:window:1.2.0] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\32e05b2f2f5bc4b18c72b8f35e0189d5\transformed\jetified-window-1.2.0\AndroidManifest.xml:23:9-25:40
+107            android:name="androidx.window.extensions"
+107-->[androidx.window:window:1.2.0] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\32e05b2f2f5bc4b18c72b8f35e0189d5\transformed\jetified-window-1.2.0\AndroidManifest.xml:24:13-54
+108            android:required="false" />
+108-->[androidx.window:window:1.2.0] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\32e05b2f2f5bc4b18c72b8f35e0189d5\transformed\jetified-window-1.2.0\AndroidManifest.xml:25:13-37
+109        <uses-library
+109-->[androidx.window:window:1.2.0] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\32e05b2f2f5bc4b18c72b8f35e0189d5\transformed\jetified-window-1.2.0\AndroidManifest.xml:26:9-28:40
+110            android:name="androidx.window.sidecar"
+110-->[androidx.window:window:1.2.0] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\32e05b2f2f5bc4b18c72b8f35e0189d5\transformed\jetified-window-1.2.0\AndroidManifest.xml:27:13-51
+111            android:required="false" />
+111-->[androidx.window:window:1.2.0] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\32e05b2f2f5bc4b18c72b8f35e0189d5\transformed\jetified-window-1.2.0\AndroidManifest.xml:28:13-37
+112
+113        <provider
+113-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\f3276b02d8a2d4072bcf8aeaa7cb1f1d\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:24:9-32:20
+114            android:name="androidx.startup.InitializationProvider"
+114-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\f3276b02d8a2d4072bcf8aeaa7cb1f1d\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:25:13-67
+115            android:authorities="com.statusdownloader.download.videoimagesaver.androidx-startup"
+115-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\f3276b02d8a2d4072bcf8aeaa7cb1f1d\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:26:13-68
+116            android:exported="false" >
+116-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\f3276b02d8a2d4072bcf8aeaa7cb1f1d\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:27:13-37
+117            <meta-data
+117-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\f3276b02d8a2d4072bcf8aeaa7cb1f1d\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
+118                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+118-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\f3276b02d8a2d4072bcf8aeaa7cb1f1d\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+119                android:value="androidx.startup" />
+119-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\f3276b02d8a2d4072bcf8aeaa7cb1f1d\transformed\jetified-lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+120            <meta-data
+120-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\e3898096c8912b5e8859d9d38def915a\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+121                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+121-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\e3898096c8912b5e8859d9d38def915a\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+122                android:value="androidx.startup" />
+122-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\e3898096c8912b5e8859d9d38def915a\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+123        </provider>
+124
+125        <receiver
+125-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\e3898096c8912b5e8859d9d38def915a\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+126            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+126-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\e3898096c8912b5e8859d9d38def915a\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+127            android:directBootAware="false"
+127-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\e3898096c8912b5e8859d9d38def915a\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+128            android:enabled="true"
+128-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\e3898096c8912b5e8859d9d38def915a\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+129            android:exported="true"
+129-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\e3898096c8912b5e8859d9d38def915a\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+130            android:permission="android.permission.DUMP" >
+130-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\e3898096c8912b5e8859d9d38def915a\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+131            <intent-filter>
+131-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\e3898096c8912b5e8859d9d38def915a\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+132                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+132-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\e3898096c8912b5e8859d9d38def915a\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+132-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\e3898096c8912b5e8859d9d38def915a\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+133            </intent-filter>
+134            <intent-filter>
+134-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\e3898096c8912b5e8859d9d38def915a\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+135                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+135-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\e3898096c8912b5e8859d9d38def915a\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+135-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\e3898096c8912b5e8859d9d38def915a\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+136            </intent-filter>
+137            <intent-filter>
+137-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\e3898096c8912b5e8859d9d38def915a\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+138                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+138-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\e3898096c8912b5e8859d9d38def915a\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+138-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\e3898096c8912b5e8859d9d38def915a\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+139            </intent-filter>
+140            <intent-filter>
+140-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\e3898096c8912b5e8859d9d38def915a\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+141                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+141-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\e3898096c8912b5e8859d9d38def915a\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+141-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\M. COMPUTER\.gradle\caches\transforms-3\e3898096c8912b5e8859d9d38def915a\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+142            </intent-filter>
+143        </receiver>
+144    </application>
+145
+146</manifest>

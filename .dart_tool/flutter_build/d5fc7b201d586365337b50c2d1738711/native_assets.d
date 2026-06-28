@@ -1,0 +1,1 @@
+ E:\\flutterprojects\\whatsapp_saver\\.dart_tool\\flutter_build\\d5fc7b201d586365337b50c2d1738711\\native_assets.yaml: 
