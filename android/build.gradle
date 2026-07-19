@@ -2,6 +2,10 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        // Official Flutter engine artifacts (needed when mirror is incomplete)
+        maven { url "https://storage.googleapis.com/download.flutter.io" }
+        // Tsinghua mirror fallback (if official is blocked)
+        maven { url "https://mirrors.tuna.tsinghua.edu.cn/flutter/download.flutter.io" }
     }
 }
 
