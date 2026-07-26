@@ -1,0 +1,47 @@
+name: whatsapp_saver
+description: "WhatsApp Status Saver - Save and manage WhatsApp statuses."
+publish_to: 'none'
+
+version: 1.0.4+4
+
+environment:
+  sdk: ^3.5.3
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  permission_handler: ^11.3.1
+  path_provider: ^2.1.4
+  shared_preferences: ^2.3.2
+  share_plus: ^10.0.2
+  url_launcher: ^6.3.0
+  video_player: ^2.9.1
+  package_info_plus: ^8.0.2
+  path: ^1.9.0
+  firebase_core: ^3.8.1
+  firebase_messaging: ^15.1.6
+  flutter_local_notifications: ^18.0.1
+  # TODO(next release): re-enable AdMob
+  # google_mobile_ads: ^5.2.0
+  video_thumbnail: ^0.5.3
+  device_info_plus: ^11.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  flutter_launcher_icons: ^0.14.3
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: assets/2026.png
+  adaptive_icon_background: "#1E4620"
+  adaptive_icon_foreground: assets/2026.png
+  min_sdk_android: 21
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/2026.png

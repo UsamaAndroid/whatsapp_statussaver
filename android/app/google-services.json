@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "281516996242",
+    "project_id": "statussaverjumbo",
+    "storage_bucket": "statussaverjumbo.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:281516996242:android:c52d64829778ab3669184b",
+        "android_client_info": {
+          "package_name": "com.statusdownloader.download.videoimagesaver"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAb3pTH_u8zFGNPrys65LFcON_5wMFbAb4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
