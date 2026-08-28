@@ -1,5 +1,5 @@
-name: whatsapp_saver
-description: "My lovely App."
+name: status_saver
+description: "Status Saver - save and manage statuses from your device."
 publish_to: 'none'
 
 version: 1.0.4+4

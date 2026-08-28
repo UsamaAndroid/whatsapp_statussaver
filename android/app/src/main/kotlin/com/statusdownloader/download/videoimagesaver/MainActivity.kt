@@ -58,9 +58,9 @@ class MainActivity : FlutterActivity() {
 
         val mimeType = guessMimeType(fileName, isVideo)
         val relativeFolder = if (isVideo) {
-            "${Environment.DIRECTORY_MOVIES}/WAStatusSaver"
+            "${Environment.DIRECTORY_MOVIES}/StatusSaver"
         } else {
-            "${Environment.DIRECTORY_PICTURES}/WAStatusSaver"
+            "${Environment.DIRECTORY_PICTURES}/StatusSaver"
         }
 
         return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
@@ -116,7 +116,7 @@ class MainActivity : FlutterActivity() {
         val base = Environment.getExternalStoragePublicDirectory(
             if (isVideo) Environment.DIRECTORY_MOVIES else Environment.DIRECTORY_PICTURES,
         )
-        val dir = File(base, "WAStatusSaver")
+        val dir = File(base, "StatusSaver")
         if (!dir.exists() && !dir.mkdirs()) return null
 
         val dest = File(dir, fileName)
@@ -170,7 +170,7 @@ class MainActivity : FlutterActivity() {
         val base = Environment.getExternalStoragePublicDirectory(
             if (isVideo) Environment.DIRECTORY_MOVIES else Environment.DIRECTORY_PICTURES,
         )
-        return File(File(base, "WAStatusSaver"), fileName).absolutePath
+        return File(File(base, "StatusSaver"), fileName).absolutePath
     }
 
     private fun guessMimeType(fileName: String, isVideo: Boolean): String {
