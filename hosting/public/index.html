@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Status Saver</title>
+<meta name="description" content="Status Saver — view and save image and video statuses already stored on your device.">
+<style>
+  :root {
+    --green: #7BC142;
+    --dark-green: #1E4620;
+    --ink: #1a1c1a;
+    --muted: #5f6b5f;
+    --bg: #ffffff;
+    --card: #f6f9f4;
+    --border: #e2ebdd;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #eef2ec;
+      --muted: #a4b0a2;
+      --bg: #12150f;
+      --card: #1a1f17;
+      --border: #2b332a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 56px 20px 72px; }
+  header { text-align: center; margin-bottom: 44px; }
+  .mark {
+    width: 72px; height: 72px; border-radius: 18px;
+    background: var(--green); color: #fff;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 34px; margin-bottom: 18px;
+  }
+  h1 { font-size: 30px; line-height: 1.25; margin: 0 0 10px; color: var(--dark-green); }
+  @media (prefers-color-scheme: dark) { h1 { color: var(--green); } }
+  .tagline { color: var(--muted); margin: 0 0 26px; font-size: 17px; }
+  .cta {
+    display: inline-block; background: var(--green); color: #fff;
+    text-decoration: none; font-weight: 600;
+    padding: 13px 28px; border-radius: 999px;
+  }
+  .cta:hover { filter: brightness(0.94); }
+  section {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 22px 24px; margin-bottom: 18px;
+  }
+  h2 { font-size: 15px; letter-spacing: .04em; text-transform: uppercase;
+       color: var(--muted); margin: 0 0 12px; font-weight: 600; }
+  p { margin: 0 0 12px; }
+  p:last-child { margin-bottom: 0; }
+  ul { margin: 0; padding-left: 20px; }
+  li { margin-bottom: 7px; }
+  li:last-child { margin-bottom: 0; }
+  a { color: var(--green); }
+  footer {
+    margin-top: 36px; padding-top: 22px; border-top: 1px solid var(--border);
+    color: var(--muted); font-size: 13px; text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="mark">&#8681;</div>
+    <h1>Status Saver</h1>
+    <p class="tagline">View and save image and video statuses already stored on your device.</p>
+    <a class="cta" href="https://play.google.com/store/apps/details?id=com.statusdownloader.download.videoimagesaver">Get it on Google Play</a>
+  </header>
+
+  <section>
+    <h2>What it does</h2>
+    <ul>
+      <li>Browse image and video statuses saved on your device</li>
+      <li>Save the ones you want to your gallery</li>
+      <li>Share or repost saved media</li>
+      <li>Start a chat without saving the number to your contacts</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Privacy</h2>
+    <p>The app works locally on your phone. We do not run servers that collect or store your personal data, and your saved media stays on your device.</p>
+    <p><a href="https://docs.google.com/document/d/e/2PACX-1vRWApv9V1MiqjwmQusRYkBv4jO25mZTHh29PC7-YXeWchjRm10K1nCyJFav5liaL9d9en9oIZFDMtPS/pub">Read the full privacy policy</a></p>
+  </section>
+
+  <section>
+    <h2>Support</h2>
+    <p>Questions, bugs or suggestions: <a href="mailto:zargarapps6@gmail.com">zargarapps6@gmail.com</a></p>
+  </section>
+
+  <footer>
+    Status Saver is an independent app and is not affiliated with, endorsed by,
+    or connected to WhatsApp, Meta, or any related company.
+    All trademarks belong to their respective owners.
+  </footer>
+
+</div>
+</body>
+</html>
