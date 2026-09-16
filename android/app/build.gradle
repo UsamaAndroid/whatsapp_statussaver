@@ -15,7 +15,10 @@ if (keystorePropertiesFile.exists()) {
 android {
     namespace = "com.statusdownloader.download.videoimagesaver"
     compileSdk = 36
-    ndkVersion = "25.1.8937393"
+    // Delegate to the Flutter SDK's recommended NDK instead of pinning an
+    // old one — Flutter keeps this in sync with a 16 KB page size
+    // compliant NDK (r27+) as the SDK is upgraded.
+    ndkVersion = flutter.ndkVersion
 
     compileOptions {
         coreLibraryDesugaringEnabled true

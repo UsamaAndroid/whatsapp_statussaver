@@ -1,6 +1,7 @@
 package com.statusdownloader.download.videoimagesaver
 
 import android.content.ContentValues
+import android.content.Intent
 import android.media.MediaScannerConnection
 import android.net.Uri
 import android.os.Build
@@ -14,9 +15,16 @@ import java.net.URLConnection
 
 class MainActivity : FlutterActivity() {
     private val channelName = "com.statusdownloader.download.videoimagesaver/media"
+    private var statusAccess: StatusAccessHandler? = null
 
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
+
+        val access = StatusAccessHandler(this)
+        statusAccess = access
+        MethodChannel(flutterEngine.dartExecutor.binaryMessenger, StatusAccessHandler.CHANNEL)
+            .setMethodCallHandler { call, result -> access.onMethodCall(call, result) }
+
         MethodChannel(flutterEngine.dartExecutor.binaryMessenger, channelName)
             .setMethodCallHandler { call, result ->
                 when (call.method) {
@@ -50,6 +58,11 @@ class MainActivity : FlutterActivity() {
                     else -> result.notImplemented()
                 }
             }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        if (statusAccess?.onActivityResult(requestCode, resultCode, data) == true) return
+        super.onActivityResult(requestCode, resultCode, data)
     }
 
     private fun saveToGallery(sourcePath: String, fileName: String, isVideo: Boolean): String? {

@@ -3,6 +3,7 @@ import 'package:package_info_plus/package_info_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../core/constants.dart';
 import '../services/settings_service.dart';
+import '../services/status_folder_service.dart';
 import '../services/status_service.dart';
 import '../widgets/app_app_bar.dart';
 import '../widgets/usage_guide_dialog.dart';
@@ -28,7 +29,10 @@ class SettingsTabScreen extends StatefulWidget {
 }
 
 class _SettingsTabScreenState extends State<SettingsTabScreen> {
+  final StatusFolderService _folderService = StatusFolderService();
+
   bool _autoSave = false;
+  bool _folderGranted = false;
   String _saveFolderPath = '';
   String _version = '';
 
@@ -41,13 +45,37 @@ class _SettingsTabScreenState extends State<SettingsTabScreen> {
   Future<void> _loadSettings() async {
     final version = await PackageInfo.fromPlatform();
     final savePath = await widget.statusService.getSaveDirectory();
+    final folderGranted = await _folderService.hasAccess();
 
     if (mounted) {
       setState(() {
         _autoSave = widget.settingsService.autoSave;
+        _folderGranted = folderGranted;
         _saveFolderPath = savePath;
         _version = version.version;
       });
+    }
+  }
+
+  Future<void> _requestFolderAccess() async {
+    final result = await _folderService.requestAccess();
+    if (!mounted) return;
+
+    if (result == FolderAccessResult.granted) {
+      setState(() => _folderGranted = true);
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Status folder access granted')),
+      );
+    } else if (result == FolderAccessResult.wrongFolder) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text(
+            'That folder holds no statuses. Open the folder the picker starts '
+            'in and tap "Use this folder".',
+          ),
+          duration: Duration(seconds: 5),
+        ),
+      );
     }
   }
 
@@ -99,6 +127,13 @@ class _SettingsTabScreenState extends State<SettingsTabScreen> {
             ),
           ),
           _SettingsTile(
+            title: 'Status folder access',
+            subtitle: _folderGranted
+                ? 'Granted — tap to pick the folder again'
+                : 'Only needed if your statuses do not show up',
+            onTap: _requestFolderAccess,
+          ),
+          _SettingsTile(
             title: 'Save Statuses in Folder',
             subtitle: _saveFolderPath.isEmpty
                 ? 'Loading...'
@@ -125,7 +160,6 @@ class _SettingsTabScreenState extends State<SettingsTabScreen> {
           _SettingsTile(
             title: 'About',
             subtitle: 'Version: $_version',
-            onTap: () {},
           ),
           Padding(
             padding: const EdgeInsets.fromLTRB(16, 20, 16, 28),
@@ -177,7 +211,10 @@ class _SettingsTile extends StatelessWidget {
               color: Colors.grey.shade600,
             ),
           ),
-          trailing: trailing,
+          trailing: trailing ??
+              (onTap != null
+                  ? Icon(Icons.chevron_right, color: Colors.grey.shade400)
+                  : null),
         ),
         Divider(height: 1, color: Colors.grey.shade200),
       ],

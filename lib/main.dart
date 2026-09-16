@@ -9,6 +9,7 @@ import 'screens/splash_screen.dart';
 import 'services/notification_service.dart';
 import 'services/permission_service.dart';
 import 'services/settings_service.dart';
+import 'services/status_folder_service.dart';
 import 'services/status_service.dart';
 
 void main() async {
@@ -25,7 +26,7 @@ void main() async {
 
   final prefs = await SharedPreferences.getInstance();
   final settingsService = SettingsService(prefs);
-  final statusService = StatusService(settingsService);
+  final statusService = StatusService(settingsService, StatusFolderService());
   final permissionService = PermissionService();
 
   runApp(StatusSaverApp(
