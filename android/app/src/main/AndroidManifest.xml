@@ -40,11 +40,10 @@
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:value="@mipmap/ic_launcher" />
-        <!-- TODO(next release): re-enable AdMob App ID
+        <!-- AdMob: must match AppConstants.admobAppId -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy"/>
-        -->
+            android:value="ca-app-pub-7297840368404189~7675122603"/>
     </application>
     <queries>
         <intent>

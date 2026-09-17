@@ -2,7 +2,7 @@ name: status_saver
 description: "Status Saver - save and manage statuses from your device."
 publish_to: 'none'
 
-version: 1.0.9+9
+version: 1.0.10+10
 
 environment:
   sdk: ^3.5.3
@@ -22,8 +22,7 @@ dependencies:
   firebase_core: ^3.8.1
   firebase_messaging: ^15.1.6
   flutter_local_notifications: ^18.0.1
-  # TODO(next release): re-enable AdMob
-  # google_mobile_ads: ^5.2.0
+  google_mobile_ads: ^5.2.0
   video_thumbnail: ^0.5.3
   device_info_plus: ^11.1.0
 
@@ -37,8 +36,12 @@ flutter_launcher_icons:
   android: true
   ios: true
   image_path: assets/2026.png
-  adaptive_icon_background: "#1E4620"
-  adaptive_icon_foreground: assets/2026.png
+  # Adaptive icon (Android 8+): launchers mask the foreground to a circle or
+  # squircle and only the centre ~66% is guaranteed visible. So the foreground
+  # is a padded, transparent-background version of the mark rather than the
+  # full-bleed logo, which would get its corner ribbon cropped off.
+  adaptive_icon_background: "#7BC142"
+  adaptive_icon_foreground: assets/icon_foreground.png
   min_sdk_android: 21
 
 flutter:

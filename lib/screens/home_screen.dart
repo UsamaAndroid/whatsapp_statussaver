@@ -6,6 +6,7 @@ import '../services/permission_service.dart';
 import '../services/settings_service.dart';
 import '../services/status_service.dart';
 import '../widgets/app_app_bar.dart';
+import '../widgets/banner_ad_widget.dart';
 import '../widgets/usage_guide_dialog.dart';
 import 'direct_chat_tab_screen.dart';
 import 'saved_tab_screen.dart';
@@ -129,6 +130,9 @@ class _HomeScreenState extends State<HomeScreen> {
         onShareApp: _shareApp,
         onSendFeedback: _sendFeedback,
       ),
+      // Pinned to the bottom; the body is laid out above it, so the menu
+      // grid is never overlapped by the ad.
+      bottomNavigationBar: const BannerAdWidget(),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(20, 24, 20, 20),

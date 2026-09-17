@@ -1,13 +1,32 @@
 {
   "project_info": {
-    "project_number": "288352430914",
-    "project_id": "statussaverjumbo-cc4c5",
-    "storage_bucket": "statussaverjumbo-cc4c5.firebasestorage.app"
+    "project_number": "542390760808",
+    "project_id": "duadhikr-faa97",
+    "storage_bucket": "duadhikr-faa97.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:288352430914:android:f0d812b494970f32b836db",
+        "mobilesdk_app_id": "1:542390760808:android:178294dfda59f1ea15d2dd",
+        "android_client_info": {
+          "package_name": "com.dailydua.salah"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAooOxfC3MRHtBfh_e4ADgLlPs_RIMMI7M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:542390760808:android:e0b624545f04847f15d2dd",
         "android_client_info": {
           "package_name": "com.statusdownloader.download.videoimagesaver"
         }
@@ -15,7 +34,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCXEqSMv-pSqpxr3YqOuUi_gSxbRSFZ6XI"
+          "current_key": "AIzaSyAooOxfC3MRHtBfh_e4ADgLlPs_RIMMI7M"
         }
       ],
       "services": {

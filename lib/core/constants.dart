@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class AppConstants {
@@ -59,9 +60,20 @@ class AppConstants {
   static const String privacyPolicyUrl =
       'https://docs.google.com/document/d/e/2PACX-1vRWApv9V1MiqjwmQusRYkBv4jO25mZTHh29PC7-YXeWchjRm10K1nCyJFav5liaL9d9en9oIZFDMtPS/pub';
 
-  /// TODO(next release): replace with real AdMob IDs and re-enable ads
-  // static const String admobAppId =
-  //     'ca-app-pub-3940256099942544~3347511713';
-  // static const String bannerAdUnitId =
-  //     'ca-app-pub-3940256099942544/6300978111';
+  /// AdMob application ID. Must stay in sync with the
+  /// `com.google.android.gms.ads.APPLICATION_ID` meta-data in
+  /// AndroidManifest.xml — the app crashes on launch if they disagree.
+  static const String admobAppId = 'ca-app-pub-7297840368404189~7675122603';
+
+  static const String _bannerAdUnitIdLive =
+      'ca-app-pub-7297840368404189/1042391956';
+
+  /// Google's official sample banner unit. Used automatically in debug so a
+  /// stray tap while developing can never register against the live unit —
+  /// clicking your own real ads is grounds for an AdMob account ban.
+  static const String _bannerAdUnitIdTest =
+      'ca-app-pub-3940256099942544/6300978111';
+
+  static String get bannerAdUnitId =>
+      kDebugMode ? _bannerAdUnitIdTest : _bannerAdUnitIdLive;
 }

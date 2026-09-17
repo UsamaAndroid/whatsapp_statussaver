@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-// TODO(next release): re-enable AdMob
-// import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'core/theme.dart';
 import 'screens/home_screen.dart';
@@ -48,14 +47,13 @@ Future<void> _initServicesInBackground() async {
     }
   }
 
-  // TODO(next release): re-enable AdMob
-  // try {
-  //   await MobileAds.instance.initialize();
-  // } catch (e, st) {
-  //   if (kDebugMode) {
-  //     debugPrint('MobileAds init failed: $e\n$st');
-  //   }
-  // }
+  try {
+    await MobileAds.instance.initialize();
+  } catch (e, st) {
+    if (kDebugMode) {
+      debugPrint('MobileAds init failed: $e\n$st');
+    }
+  }
 }
 
 class StatusSaverApp extends StatefulWidget {

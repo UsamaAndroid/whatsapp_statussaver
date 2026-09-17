@@ -247,6 +247,13 @@
             </list>
           </value>
         </entry>
+        <entry key="google_mobile_ads">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../flutter_pub_cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/google_mobile_ads-5.3.1/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="html">
           <value>
             <list>
@@ -723,6 +730,34 @@
             </list>
           </value>
         </entry>
+        <entry key="webview_flutter">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../flutter_pub_cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/webview_flutter-4.10.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="webview_flutter_android">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../flutter_pub_cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/webview_flutter_android-4.3.2/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="webview_flutter_platform_interface">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../flutter_pub_cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/webview_flutter_platform_interface-2.13.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="webview_flutter_wkwebview">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../flutter_pub_cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/webview_flutter_wkwebview-3.22.0/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="win32">
           <value>
             <list>
@@ -793,6 +828,7 @@
       <root url="file://$PROJECT_DIR$/../../flutter_pub_cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/flutter_local_notifications-18.0.1/lib" />
       <root url="file://$PROJECT_DIR$/../../flutter_pub_cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/flutter_local_notifications_linux-5.0.0/lib" />
       <root url="file://$PROJECT_DIR$/../../flutter_pub_cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/flutter_local_notifications_platform_interface-8.0.0/lib" />
+      <root url="file://$PROJECT_DIR$/../../flutter_pub_cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/google_mobile_ads-5.3.1/lib" />
       <root url="file://$PROJECT_DIR$/../../flutter_pub_cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/html-0.15.6/lib" />
       <root url="file://$PROJECT_DIR$/../../flutter_pub_cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/http-1.6.0/lib" />
       <root url="file://$PROJECT_DIR$/../../flutter_pub_cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/http_parser-4.0.2/lib" />
@@ -860,6 +896,10 @@
       <root url="file://$PROJECT_DIR$/../../flutter_pub_cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/video_thumbnail-0.5.6/lib" />
       <root url="file://$PROJECT_DIR$/../../flutter_pub_cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/vm_service-14.2.5/lib" />
       <root url="file://$PROJECT_DIR$/../../flutter_pub_cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/web-1.1.1/lib" />
+      <root url="file://$PROJECT_DIR$/../../flutter_pub_cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/webview_flutter-4.10.0/lib" />
+      <root url="file://$PROJECT_DIR$/../../flutter_pub_cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/webview_flutter_android-4.3.2/lib" />
+      <root url="file://$PROJECT_DIR$/../../flutter_pub_cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/webview_flutter_platform_interface-2.13.0/lib" />
+      <root url="file://$PROJECT_DIR$/../../flutter_pub_cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/webview_flutter_wkwebview-3.22.0/lib" />
       <root url="file://$PROJECT_DIR$/../../flutter_pub_cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/win32-5.10.1/lib" />
       <root url="file://$PROJECT_DIR$/../../flutter_pub_cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/win32_registry-1.1.5/lib" />
       <root url="file://$PROJECT_DIR$/../../flutter_pub_cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/xdg_directories-1.1.0/lib" />
