@@ -89,7 +89,15 @@ class StatusService {
     }
   }
 
-  /// Returns every readable status cache folder on the device.
+  /// Returns every status cache folder on the device that exists and can be
+  /// listed without throwing.
+  ///
+  /// NOTE: a folder passing this check does NOT mean it is genuinely readable.
+  /// Under scoped storage (Android 11+) a blocked directory frequently reports
+  /// `existsSync() == true` and then returns an EMPTY listing instead of
+  /// throwing. Callers must therefore judge access on whether media actually
+  /// came back — see [_readDirectStatuses] — never on this list being
+  /// non-empty.
   List<String> findStatusDirectories() {
     final found = <String>[];
     for (final path in AppConstants.statusCachePaths) {
@@ -100,7 +108,7 @@ class StatusService {
           dir.listSync(followLinks: false);
           found.add(path);
           if (kDebugMode) {
-            debugPrint('Status folder OK: $path');
+            debugPrint('Status folder listable: $path');
           }
         }
       } catch (e) {
@@ -112,23 +120,44 @@ class StatusService {
     return found;
   }
 
+  /// Media obtained by reading the status folders directly. Empty means direct
+  /// access is unavailable OR there is genuinely nothing to show; either way
+  /// the folder grant is the next thing to try.
+  List<StatusItem> _readDirectStatuses() {
+    final items = _readFromDirectories(findStatusDirectories());
+    if (kDebugMode) {
+      debugPrint('Direct status read produced ${items.length} item(s)');
+    }
+    return items;
+  }
+
   /// True when statuses are unreachable both directly and via a folder grant,
   /// so the UI should ask the user to pick the status folder.
   Future<bool> needsFolderAccess() async {
-    if (findStatusDirectories().isNotEmpty) return false;
-    return !await _folderService.hasAccess();
+    // A grant already exists — never prompt again.
+    if (await _folderService.hasAccess()) return false;
+
+    // Only skip the prompt if direct reads actually yield media. Treating a
+    // silently-empty listing as "access works" is what previously hid the
+    // Status tab behind a permanently empty grid.
+    return _readDirectStatuses().isEmpty;
   }
 
-  /// Direct reads work on most devices; where scoped storage blocks them the
+  /// Direct reads work on some devices; where scoped storage blocks them the
   /// user's one-time folder grant supplies the same media via cached copies.
   Future<List<StatusItem>> _loadAllStatuses() async {
-    final statusDirs = findStatusDirectories();
-    if (statusDirs.isNotEmpty) return _readFromDirectories(statusDirs);
+    final direct = _readDirectStatuses();
+    if (direct.isNotEmpty) return direct;
 
     if (await _folderService.hasAccess()) {
-      return _folderService.syncStatuses();
+      final synced = await _folderService.syncStatuses();
+      if (kDebugMode) {
+        debugPrint('Folder-grant sync produced ${synced.length} item(s)');
+      }
+      return synced;
     }
-    return [];
+
+    return direct;
   }
 
   List<StatusItem> _readFromDirectories(List<String> statusDirs) {
