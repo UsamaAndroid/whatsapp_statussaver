@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'core/theme.dart';
 import 'screens/home_screen.dart';
 import 'screens/splash_screen.dart';
+import 'services/interstitial_ad_service.dart';
 import 'services/notification_service.dart';
 import 'services/permission_service.dart';
 import 'services/settings_service.dart';
@@ -49,6 +50,9 @@ Future<void> _initServicesInBackground() async {
 
   try {
     await MobileAds.instance.initialize();
+    // Warm the first interstitial so an early navigation has one ready
+    // instead of silently falling through on a cold start.
+    InterstitialAdService.instance.preload();
   } catch (e, st) {
     if (kDebugMode) {
       debugPrint('MobileAds init failed: $e\n$st');

@@ -2,12 +2,17 @@ import 'package:flutter/material.dart';
 import '../core/constants.dart';
 
 class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
+  /// Screen name shown in the bar. Defaults to the app name, which is what
+  /// the home screen wants; every pushed screen should pass its own so the
+  /// user can tell where they are.
+  final String? title;
   final bool showBackButton;
   final VoidCallback? onShareApp;
   final VoidCallback? onSendFeedback;
 
   const AppAppBar({
     super.key,
+    this.title,
     this.showBackButton = false,
     this.onShareApp,
     this.onSendFeedback,
@@ -26,9 +31,9 @@ class AppAppBar extends StatelessWidget implements PreferredSizeWidget {
               onPressed: () => Navigator.of(context).pop(),
             )
           : null,
-      title: const Text(
-        AppConstants.appName,
-        style: TextStyle(
+      title: Text(
+        title ?? AppConstants.appName,
+        style: const TextStyle(
           fontWeight: FontWeight.bold,
           fontSize: 20,
         ),

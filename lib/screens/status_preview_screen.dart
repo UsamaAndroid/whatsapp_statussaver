@@ -154,7 +154,7 @@ class _StatusPreviewScreenState extends State<StatusPreviewScreen> {
       appBar: AppBar(
         backgroundColor: Colors.black,
         foregroundColor: Colors.white,
-        title: const Text(AppConstants.appName),
+        title: Text(widget.isFromSaved ? 'Saved media' : 'Status'),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () => Navigator.of(context).pop(),

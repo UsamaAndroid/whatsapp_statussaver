@@ -3,6 +3,7 @@ import '../core/constants.dart';
 import '../models/status_item.dart';
 import '../services/status_service.dart';
 import '../widgets/app_app_bar.dart';
+import '../widgets/banner_ad_widget.dart';
 import '../widgets/media_grid_view.dart';
 import 'status_preview_screen.dart';
 
@@ -64,10 +65,12 @@ class SavedTabScreenState extends State<SavedTabScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppAppBar(
+        title: 'Saved',
         showBackButton: widget.showBackButton,
         onShareApp: widget.onShareApp,
         onSendFeedback: widget.onSendFeedback,
       ),
+      bottomNavigationBar: const BannerAdWidget(),
       body: Column(
         children: [
           Material(

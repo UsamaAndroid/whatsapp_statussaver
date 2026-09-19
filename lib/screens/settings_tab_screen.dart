@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../core/constants.dart';
+import '../services/interstitial_ad_service.dart';
 import '../services/settings_service.dart';
 import '../services/status_folder_service.dart';
 import '../services/status_service.dart';
 import '../widgets/app_app_bar.dart';
+import '../widgets/native_ad_widget.dart';
 import '../widgets/usage_guide_dialog.dart';
 
 class SettingsTabScreen extends StatefulWidget {
@@ -79,6 +81,23 @@ class _SettingsTabScreenState extends State<SettingsTabScreen> {
     }
   }
 
+  /// Applies the Auto Save change first, then shows an interstitial. Doing it
+  /// in that order means the setting is already persisted and reflected in the
+  /// UI before the ad takes over the screen, so nothing is lost if the user
+  /// dismisses the ad or backgrounds the app while it is up.
+  Future<void> _onAutoSaveChanged(bool value) async {
+    await widget.settingsService.setAutoSave(value);
+    if (!mounted) return;
+    setState(() => _autoSave = value);
+
+    if (value) {
+      await widget.statusService.autoSaveNewStatuses();
+    }
+    if (!mounted) return;
+
+    await InterstitialAdService.instance.showThen(onContinue: () {});
+  }
+
   Future<void> _launchUrl(String url) async {
     final uri = Uri.parse(url);
     if (await canLaunchUrl(uri)) {
@@ -90,10 +109,12 @@ class _SettingsTabScreenState extends State<SettingsTabScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppAppBar(
+        title: 'Settings',
         showBackButton: widget.showBackButton,
         onShareApp: widget.onShareApp,
         onSendFeedback: widget.onSendFeedback,
       ),
+      bottomNavigationBar: const NativeAdWidget(),
       body: ListView(
         children: [
           Padding(
@@ -117,13 +138,7 @@ class _SettingsTabScreenState extends State<SettingsTabScreen> {
             subtitle: 'Automatically Save all New Statuses',
             trailing: Switch(
               value: _autoSave,
-              onChanged: (value) async {
-                await widget.settingsService.setAutoSave(value);
-                setState(() => _autoSave = value);
-                if (value) {
-                  await widget.statusService.autoSaveNewStatuses();
-                }
-              },
+              onChanged: _onAutoSaveChanged,
             ),
           ),
           _SettingsTile(

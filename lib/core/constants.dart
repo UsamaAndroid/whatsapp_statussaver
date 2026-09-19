@@ -76,4 +76,20 @@ class AppConstants {
 
   static String get bannerAdUnitId =>
       kDebugMode ? _bannerAdUnitIdTest : _bannerAdUnitIdLive;
+
+  static const String _nativeAdUnitIdLive =
+      'ca-app-pub-7297840368404189/3226781130';
+  static const String _nativeAdUnitIdTest =
+      'ca-app-pub-3940256099942544/2247696110';
+
+  static String get nativeAdUnitId =>
+      kDebugMode ? _nativeAdUnitIdTest : _nativeAdUnitIdLive;
+
+  static const String _interstitialAdUnitIdLive =
+      'ca-app-pub-7297840368404189/6003144405';
+  static const String _interstitialAdUnitIdTest =
+      'ca-app-pub-3940256099942544/1033173712';
+
+  static String get interstitialAdUnitId =>
+      kDebugMode ? _interstitialAdUnitIdTest : _interstitialAdUnitIdLive;
 }

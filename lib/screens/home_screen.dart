@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../core/constants.dart';
+import '../services/interstitial_ad_service.dart';
 import '../services/permission_service.dart';
 import '../services/settings_service.dart';
 import '../services/status_service.dart';
 import '../widgets/app_app_bar.dart';
-import '../widgets/banner_ad_widget.dart';
+import '../widgets/native_ad_widget.dart';
 import '../widgets/usage_guide_dialog.dart';
 import 'direct_chat_tab_screen.dart';
 import 'saved_tab_screen.dart';
@@ -79,6 +80,17 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+  /// Shows an interstitial (when one is ready) and then opens [page]. If no
+  /// ad is loaded the navigation happens immediately — the user never waits
+  /// on an ad.
+  void _openPageAfterAd(Widget page) {
+    InterstitialAdService.instance.showThen(
+      onContinue: () {
+        if (mounted) _openPage(page);
+      },
+    );
+  }
+
   void _openStatus() {
     _openPage(
       StatusTabScreen(
@@ -91,7 +103,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   void _openSaved() {
-    _openPage(
+    _openPageAfterAd(
       SavedTabScreen(
         statusService: widget.statusService,
         onShareApp: _shareApp,
@@ -102,7 +114,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   void _openChat() {
-    _openPage(
+    _openPageAfterAd(
       DirectChatTabScreen(
         onShareApp: _shareApp,
         onSendFeedback: _sendFeedback,
@@ -112,7 +124,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   void _openSettings() {
-    _openPage(
+    _openPageAfterAd(
       SettingsTabScreen(
         settingsService: widget.settingsService,
         statusService: widget.statusService,
@@ -132,7 +144,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       // Pinned to the bottom; the body is laid out above it, so the menu
       // grid is never overlapped by the ad.
-      bottomNavigationBar: const BannerAdWidget(),
+      bottomNavigationBar: const NativeAdWidget(),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(20, 24, 20, 20),
@@ -165,7 +177,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     _HomeMenuButton(
                       icon: Icons.radio_button_checked_outlined,
-                      label: 'New Statuses',
+                      label: 'New Status',
                       subtitle: 'View & save statuses',
                       onTap: _openStatus,
                     ),

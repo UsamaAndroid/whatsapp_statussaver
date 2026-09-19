@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../core/constants.dart';
 import '../widgets/app_app_bar.dart';
+import '../widgets/native_ad_widget.dart';
 
 class DirectChatTabScreen extends StatefulWidget {
   final VoidCallback onShareApp;
@@ -183,10 +184,12 @@ class _DirectChatTabScreenState extends State<DirectChatTabScreen> {
 
     return Scaffold(
       appBar: AppAppBar(
+        title: 'Direct Chat',
         showBackButton: widget.showBackButton,
         onShareApp: widget.onShareApp,
         onSendFeedback: widget.onSendFeedback,
       ),
+      bottomNavigationBar: const NativeAdWidget(),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(20),
         child: Form(
