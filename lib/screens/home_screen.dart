@@ -165,7 +165,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     _HomeMenuButton(
                       icon: Icons.radio_button_checked_outlined,
-                      label: 'Status',
+                      label: 'New Statuses',
                       subtitle: 'View & save statuses',
                       onTap: _openStatus,
                     ),
