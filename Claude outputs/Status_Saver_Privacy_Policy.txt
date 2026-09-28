@@ -1,0 +1,171 @@
+Privacy Policy
+
+Last updated: September 19, 2026
+
+Status Saver ("we", "our", or "us") built the Status Saver app as a free application. This service is provided at no cost and is intended for use as is.
+
+This page explains how we handle information when you use our app. By using Status Saver, you agree to the practices described in this Privacy Policy.
+
+
+Overview
+
+Status Saver helps you view and save image and video statuses from WhatsApp and WhatsApp Business that are already stored on your device. Your statuses, your saved media and your settings stay on your phone — we never upload them, and we do not operate servers that receive them.
+
+The app is free and supported by advertising. To show ads and to deliver notifications, it includes services provided by Google (Google AdMob and Firebase Cloud Messaging). These services send limited technical information to Google, and are described in detail below.
+
+
+Information We Collect
+
+Information we do NOT collect
+
+We do not collect, transmit, or store on our own servers:
+
+Your name, email address, or phone number
+Your WhatsApp messages, contacts, or chat history
+Your statuses or saved media files
+Your precise location
+Payment or billing information
+
+Information stored on your device
+
+The app stores the following only on your device:
+
+App settings, such as your auto-save preference and the folder access you have granted
+Saved status files (images and videos) that you choose to download
+
+This information stays on your phone unless you choose to share it using your device's share feature or move it elsewhere.
+
+Information collected by Google services
+
+Because the app displays ads and can send notifications, Google's services may collect:
+
+Your device's advertising ID — a resettable identifier that you control in Android Settings
+A Firebase installation identifier and messaging token, used to deliver notifications
+Standard technical information such as device model, operating system version, language, approximate (non-precise) location derived from your IP address, and data about ads that were requested, shown, clicked or measured
+
+This information is processed by Google under Google's own privacy policy, not by us. We do not receive or store your advertising ID.
+
+
+Advertising
+
+Status Saver displays advertising supplied by Google AdMob. This includes banner ads, native ads, and occasional full-screen (interstitial) ads shown between screens.
+
+To serve and measure these ads, the Google Mobile Ads SDK uses your device's advertising ID together with the technical information listed above. Depending on your settings and your region, the ads you see may be personalised or non-personalised.
+
+You remain in control of this:
+
+To reset or delete your advertising ID, open Android Settings, then Privacy, then Ads
+To stop ads being personalised, use the "Opt out of Ads Personalisation" setting on that same screen
+
+Google's Privacy Policy: https://policies.google.com/privacy
+How Google uses information from apps that use its services: https://policies.google.com/technologies/partner-sites
+
+
+Storage and Media Access
+
+To provide its core features, the app needs limited access to media on your device:
+
+Photo and video permission, so that statuses you save can be written to your device's gallery
+A one-time folder selection: where the app cannot read your status folder directly, it asks you to choose your messaging app's media folder using Android's own system folder picker. Android then grants the app access to that folder only, and you can revoke it at any time.
+
+The app does not request "All files access" (MANAGE_EXTERNAL_STORAGE), and it cannot browse unrelated files or folders on your device. We use this access solely to display statuses and to save the ones you choose. This content is never uploaded to us.
+
+
+Notifications
+
+The app uses Firebase Cloud Messaging to send occasional notifications, such as information about app updates or new features. To deliver these, Firebase generates a token that identifies your installation of the app. You can turn notifications off at any time in Android Settings, and you can decline the notification permission when it is requested.
+
+
+How We Use Information
+
+Information processed by the app is used to:
+
+Display the statuses available on your device
+Save the statuses you select to your device
+Remember your in-app preferences
+Open links you tap, such as this policy or an app store link
+Display and measure advertising, through Google AdMob
+Deliver notifications that you have allowed
+
+We do not sell your personal information to third parties.
+
+
+Third-Party Services
+
+WhatsApp / WhatsApp Business
+
+Status Saver reads media from folders created by WhatsApp or WhatsApp Business on your device. We are not affiliated with, endorsed by, or sponsored by WhatsApp Inc. or Meta Platforms, Inc. Your use of WhatsApp is governed by WhatsApp's own terms and privacy policy.
+
+Google AdMob
+
+Used to display and measure advertising in the app. Data handling is described in Google's Privacy Policy.
+
+Firebase Cloud Messaging
+
+Used to deliver push notifications. Data handling is described in Google's Privacy Policy.
+
+Google Play Services
+
+When you install or update the app through Google Play, Google Play Services may process certain device information as described in Google's Privacy Policy.
+
+Share and open links
+
+If you use "Share" or open an external link from the app, that action is handled by your device or by the app you choose (for example a messaging app or a browser). We do not control those services.
+
+We do not use analytics or crash-reporting SDKs such as Google Analytics for Firebase, Firebase Crashlytics, or the Facebook SDK.
+
+
+Log Data
+
+We do not intentionally collect log data from your device. If the app crashes, standard Android system logs may be created on your device. We do not receive these logs unless you choose to send them to us, for example by email when reporting a problem.
+
+
+Cookies
+
+Status Saver does not use cookies. If you open a website through the app (such as this privacy policy page in a browser), that website may use cookies according to its own policy.
+
+
+Data Retention
+
+Saved statuses remain on your device until you delete them.
+App settings remain until you clear app data or uninstall the app.
+Uninstalling the app removes locally stored app preferences. Saved files in your gallery or other folders remain until you delete them manually.
+Information held by Google in connection with advertising and notifications is retained according to Google's own retention practices.
+
+
+Security
+
+We design the app so that your statuses and settings stay on your device. However, no method of electronic storage is 100% secure. You are responsible for keeping your device secure (screen lock, permissions, and so on).
+
+
+Children's Privacy
+
+Status Saver is not directed at children under 13, and we do not knowingly collect personal information from children. The app displays advertising and is not designed for, or targeted at, children. If you believe a child has provided us with personal information, please email us and we will assist in removing it where applicable.
+
+
+Your Choices and Rights
+
+You can:
+
+Reset or delete your advertising ID, or opt out of ad personalisation, in Android Settings, under Privacy, then Ads
+Turn notifications off in Android Settings
+Revoke the folder access you granted, in Android Settings, under Apps, then Status Saver
+Deny or revoke permissions in Android Settings (some features may not work without media access)
+Delete saved files from your device at any time
+Clear app data or uninstall the app to remove stored preferences
+Contact us with questions about this policy
+
+Depending on your country, you may have additional privacy rights under local law, such as rights of access, correction, or deletion. Because we do not hold your personal data on our own servers, most requests can be fulfilled by managing data on your device, adjusting the Google settings described above, or uninstalling the app.
+
+
+Changes to This Privacy Policy
+
+We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last updated" date. Continued use of the app after changes means you accept the updated policy.
+
+
+Contact Us
+
+If you have questions or suggestions about this Privacy Policy, contact us at:
+
+Email: zargarapps6@gmail.com
+Developer Name: Nobel
