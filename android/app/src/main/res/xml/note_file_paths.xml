@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- Exported notes are written to getTemporaryDirectory() == cacheDir. -->
+    <cache-path name="notes" path="." />
+</paths>

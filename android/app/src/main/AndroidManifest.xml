@@ -40,6 +40,17 @@
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:value="@mipmap/ic_launcher" />
+        <!-- Shares exported notes (cache dir) with WhatsApp; authority must
+             match MainActivity.shareImageToWhatsApp -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.noteprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/note_file_paths" />
+        </provider>
         <!-- AdMob: must match AppConstants.admobAppId -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../core/constants.dart';
+import '../features/note/create_note_screen.dart';
 import '../services/interstitial_ad_service.dart';
 import '../services/permission_service.dart';
 import '../services/settings_service.dart';
@@ -135,6 +136,10 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+  void _openCreateNote() {
+    _openPage(const CreateNoteScreen());
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -200,6 +205,23 @@ class _HomeScreenState extends State<HomeScreen> {
                       onTap: _openSettings,
                     ),
                   ],
+                ),
+              ),
+              const SizedBox(height: 12),
+              FilledButton.icon(
+                onPressed: _openCreateNote,
+                style: FilledButton.styleFrom(
+                  backgroundColor: AppConstants.primaryGreen,
+                  foregroundColor: Colors.white,
+                  minimumSize: const Size.fromHeight(52),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                ),
+                icon: const Icon(Icons.edit_note),
+                label: const Text(
+                  'Create note',
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
                 ),
               ),
             ],

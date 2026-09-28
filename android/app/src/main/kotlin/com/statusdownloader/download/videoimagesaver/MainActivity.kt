@@ -1,5 +1,6 @@
 package com.statusdownloader.download.videoimagesaver
 
+import android.content.ActivityNotFoundException
 import android.content.ContentValues
 import android.content.Intent
 import android.media.MediaScannerConnection
@@ -7,14 +8,17 @@ import android.net.Uri
 import android.os.Build
 import android.os.Environment
 import android.provider.MediaStore
+import androidx.core.content.FileProvider
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
+import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import java.io.File
 import java.net.URLConnection
 
 class MainActivity : FlutterActivity() {
     private val channelName = "com.statusdownloader.download.videoimagesaver/media"
+    private val noteChannelName = "app.notes/whatsapp"
     private var statusAccess: StatusAccessHandler? = null
 
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
@@ -24,6 +28,9 @@ class MainActivity : FlutterActivity() {
         statusAccess = access
         MethodChannel(flutterEngine.dartExecutor.binaryMessenger, StatusAccessHandler.CHANNEL)
             .setMethodCallHandler { call, result -> access.onMethodCall(call, result) }
+
+        MethodChannel(flutterEngine.dartExecutor.binaryMessenger, noteChannelName)
+            .setMethodCallHandler { call, result -> handleNoteCall(call, result) }
 
         MethodChannel(flutterEngine.dartExecutor.binaryMessenger, channelName)
             .setMethodCallHandler { call, result ->
@@ -58,6 +65,49 @@ class MainActivity : FlutterActivity() {
                     else -> result.notImplemented()
                 }
             }
+    }
+
+    private fun handleNoteCall(call: MethodCall, result: MethodChannel.Result) {
+        when (call.method) {
+            "shareImageToWhatsApp" -> {
+                val path = call.argument<String>("path")
+                if (path.isNullOrBlank()) {
+                    result.error("INVALID_ARGS", "path required", null)
+                    return
+                }
+                try {
+                    result.success(shareImageToWhatsApp(File(path)))
+                } catch (e: Exception) {
+                    result.error("SHARE_FAILED", e.message, null)
+                }
+            }
+            else -> result.notImplemented()
+        }
+    }
+
+    /**
+     * Sends [file] straight to WhatsApp (then WhatsApp Business), which opens
+     * its send screen with "My status" at the top. Returns false when neither
+     * app is installed so Dart can fall back to the system share sheet.
+     */
+    private fun shareImageToWhatsApp(file: File): Boolean {
+        if (!file.exists()) return false
+        val uri = FileProvider.getUriForFile(this, "${packageName}.noteprovider", file)
+        for (target in listOf("com.whatsapp", "com.whatsapp.w4b")) {
+            val intent = Intent(Intent.ACTION_SEND).apply {
+                type = "image/png"
+                setPackage(target)
+                putExtra(Intent.EXTRA_STREAM, uri)
+                addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+            }
+            try {
+                startActivity(intent)
+                return true
+            } catch (_: ActivityNotFoundException) {
+                // Not installed — try the next package.
+            }
+        }
+        return false
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
