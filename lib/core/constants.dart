@@ -8,11 +8,16 @@ class AppConstants {
 
   static const String appName = 'Status Saver';
   static const String saveFolderName = 'StatusSaver';
+
   /// Older installs may still have files under this folder name.
   static const String legacySaveFolderName = 'WAStatusSaver';
 
+  /// Must match `applicationId` in android/app/build.gradle.
+  static const String androidApplicationId =
+      'com.statusdownloader.download.videoimagesaver';
+
   static const String playStoreUrl =
-      'https://play.google.com/store/apps/details?id=com.statusdownloader.download.videoimagesaver';
+      'https://play.google.com/store/apps/details?id=$androidApplicationId';
 
   static const String shareMessage =
       'Download $appName — save and manage statuses easily!\n$playStoreUrl';

@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'core/theme.dart';
 import 'screens/home_screen.dart';
 import 'screens/splash_screen.dart';
+import 'services/app_update_service.dart';
 import 'services/interstitial_ad_service.dart';
 import 'services/notification_service.dart';
 import 'services/permission_service.dart';
@@ -91,10 +92,13 @@ class _StatusSaverAppState extends State<StatusSaverApp> {
       theme: AppTheme.lightTheme,
       home: _showSplash
           ? SplashScreen(onComplete: _onSplashComplete)
-          : HomeScreen(
-              settingsService: widget.settingsService,
-              statusService: widget.statusService,
-              permissionService: widget.permissionService,
+          // Wrapped below the splash so the update prompt never covers it.
+          : AppUpdateService.wrap(
+              child: HomeScreen(
+                settingsService: widget.settingsService,
+                statusService: widget.statusService,
+                permissionService: widget.permissionService,
+              ),
             ),
     );
   }

@@ -2,7 +2,7 @@ name: status_saver
 description: "Status Saver - save and manage statuses from your device."
 publish_to: 'none'
 
-version: 1.0.13+13
+version: 1.0.14+14
 
 environment:
   sdk: ^3.5.3
@@ -26,6 +26,8 @@ dependencies:
   video_thumbnail: ^0.5.3
   device_info_plus: ^11.1.0
   gal: 2.3.1 # 2.3.2+ needs Flutter 3.27+ (uses flutter.compileSdkVersion)
+  firebase_remote_config: ^5.5.0
+  version: ^3.0.2
 
 dev_dependencies:
   flutter_test:

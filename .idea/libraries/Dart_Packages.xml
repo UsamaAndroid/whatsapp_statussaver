@@ -247,6 +247,13 @@
             </list>
           </value>
         </entry>
+        <entry key="gal">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../flutter_pub_cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/gal-2.3.1/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="google_mobile_ads">
           <value>
             <list>
@@ -828,6 +835,7 @@
       <root url="file://$PROJECT_DIR$/../../flutter_pub_cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/flutter_local_notifications-18.0.1/lib" />
       <root url="file://$PROJECT_DIR$/../../flutter_pub_cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/flutter_local_notifications_linux-5.0.0/lib" />
       <root url="file://$PROJECT_DIR$/../../flutter_pub_cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/flutter_local_notifications_platform_interface-8.0.0/lib" />
+      <root url="file://$PROJECT_DIR$/../../flutter_pub_cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/gal-2.3.1/lib" />
       <root url="file://$PROJECT_DIR$/../../flutter_pub_cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/google_mobile_ads-5.3.1/lib" />
       <root url="file://$PROJECT_DIR$/../../flutter_pub_cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/html-0.15.6/lib" />
       <root url="file://$PROJECT_DIR$/../../flutter_pub_cache/hosted/mirrors.tuna.tsinghua.edu.cn%47dart-pub%47/http-1.6.0/lib" />
